@@ -1,5 +1,6 @@
 import * as THREE from 'three'
 import * as React from 'react'
+// @ts-ignore
 import Reconciler from 'react-reconciler'
 // @ts-ignore
 //import Reconciler from 'react-reconciler/cjs/react-reconciler.production.min'
@@ -556,7 +557,7 @@ const Renderer = Reconciler<any, any, THREE.Object3D, any, any, any, any, any, a
     // Returning true will trigger commitMount
     return instance.__handlers
   },
-  commitMount(instance: any, type, props) {
+  commitMount(instance: any /*, type, props*/) {
     // https://github.com/facebook/react/issues/20271
     // This will make sure events are only added once to the central container
     const container = instance.__container
